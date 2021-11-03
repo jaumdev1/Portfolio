@@ -28,7 +28,7 @@ img, video {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 700;
   width: 100%;
   height: 100px;
@@ -213,6 +213,75 @@ a:hover {
           animation: fadein 2s normal;
 }
 
+.conhecimentos {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.divConhecimentos {
+  z-index: 100;
+  width: 80%;
+  height: 80vh;
+  background-color: rgba(238, 173, 45, 0.88);
+  border-radius: 50px;
+  margin-top: -250px;
+  padding: 20px;
+}
+
+.divConhecimentos h1 {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.divConhecimentos h3 {
+  margin-bottom: 15px;
+}
+
+.estudos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.iconEstudos {
+  width: 80px;
+  height: 80px;
+}
+
+.sobreEstudos {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sobreEstudos p {
+  font-size: 18px;
+  margin-left: 15px;
+}
+
 @-webkit-keyframes fadeinL {
   0% {
     -webkit-transform: translateX(-30%);
@@ -297,6 +366,8 @@ a:hover {
 
 @media (max-width: 700px) {
   header {
+    opacity: 0.97;
+    background-color: #000;
     position: static;
   }
   .content {
@@ -337,8 +408,41 @@ a:hover {
     font-size: 0.5em;
   }
   .icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+  }
+  .principal {
+    height: 60vh;
+  }
+  .divIcon {
+    margin-top: 20px;
+  }
+  .divConhecimentos h3 {
+    font-size: 15px;
+  }
+  .sobreEstudos p {
+    font-size: 15px;
+  }
+  .iconEstudos {
+    width: 60px;
+    height: 60px;
+  }
+  .divConhecimentos {
+    height: 100%;
+    margin-top: -15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .conhecimentos {
+    height: 100%;
+  }
+  .divIcon {
+    margin-top: 10px;
+  }
+  .sobreEstudos {
+    margin-bottom: 10px;
+    border-bottom: #000 solid 1px;
   }
 }
 
